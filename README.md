@@ -1,8 +1,8 @@
-# Coach Mobile App 🏋️‍♂️
+# Coach Mobile App 
 
 A premium fitness coaching app built with React Native (Expo) and Supabase.
 
-## 🚀 Quick Start
+## Quick Start
 
 1.  **Install Dependencies**
     ```bash
