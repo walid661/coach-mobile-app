@@ -1,50 +1,51 @@
-# Welcome to your Expo app 👋
+# Coach Mobile App 🏋️‍♂️
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A premium fitness coaching app built with React Native (Expo) and Supabase.
 
-## Get started
+## 🚀 Quick Start
 
-1. Install dependencies
+1.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
 
-   ```bash
-   npm install
-   ```
+2.  **Configure Environment**
+    Ensure you have a `.env` file in this directory with your API keys:
+    ```bash
+    EXPO_PUBLIC_OPENAI_API_KEY=sk-...
+    EXPO_PUBLIC_SUPABASE_URL=https://...
+    EXPO_PUBLIC_SUPABASE_ANON_KEY=...
+    ```
 
-2. Start the app
+3.  **Run the App**
+    ```bash
+    npx expo start
+    ```
+    - Press `i` to open in iOS Simulator (requires Xcode).
+    - Press `a` to open in Android Emulator (requires Android Studio).
+    - Scan the QR code with the **Expo Go** app on your physical device.
 
-   ```bash
-   npx expo start
-   ```
+## 🛠️ Troubleshooting
 
-In the output, you'll find options to open the app in a
+### "Command not found: npx" or "npm"
+-   Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
+-   Try restarting your terminal.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### "CocoaPods not installed" (iOS)
+-   If running on a Mac with the Simulator, you might need to run:
+    ```bash
+    npx expo run:ios
+    ```
+    This will prompt to install necessary native dependencies.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### "Network request failed" (Supabase/OpenAI)
+-   Check your `.env` file keys.
+-   Ensure your device has internet access.
+-   If using Supabase Local, make sure it's running.
 
-## Get a fresh project
+## 📱 Features
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+-   **Onboarding Flow**: Collects user stats, goals, and equipment.
+-   **Workout Generation**: Uses OpenAI (GPT-4) to create personalized plans.
+-   **Workout Display**: Renders plans with interactive checkboxes.
+-   **Persistence**: Saves profiles and workouts to Supabase.

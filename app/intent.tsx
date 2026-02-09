@@ -25,7 +25,7 @@ export default function IntentScreen() {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.header}>
-                <Text variant="headlineMedium" style={[styles.title, { color: theme.colors.primary }]}>
+                <Text variant="headlineMedium" style={[styles.title, { color: '#18181B' }]}>
                     Today's Focus
                 </Text>
                 <Text variant="bodyLarge" style={styles.subtitle}>
@@ -37,7 +37,7 @@ export default function IntentScreen() {
                 {INTENTS.map((item) => (
                     <TouchableOpacity
                         key={item.id}
-                        style={[styles.card, { borderColor: '#333' }]}
+                        style={[styles.card, { borderColor: '#E2E8F0', backgroundColor: '#FFFFFF' }]}
                         onPress={() => handleSelect(item.id)}
                     >
                         <View style={[styles.iconContainer, { backgroundColor: `${item.color}20` }]}>
@@ -54,7 +54,7 @@ export default function IntentScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#121212',
+        backgroundColor: '#F8FAFC',
     },
     header: {
         padding: 24,
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     subtitle: {
-        color: '#888',
+        color: '#64748B',
         marginTop: 8,
     },
     grid: {
@@ -71,16 +71,23 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         padding: 16,
         gap: 16,
+        justifyContent: 'space-between',
     },
     card: {
         width: '47%',
         aspectRatio: 1,
-        backgroundColor: '#1E1E1E',
         borderRadius: 24,
         padding: 16,
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: 1,
+        marginBottom: 16,
+        // Shadow for premium feel
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.05,
+        shadowRadius: 8,
+        elevation: 2,
     },
     iconContainer: {
         width: 64,
@@ -91,7 +98,7 @@ const styles = StyleSheet.create({
         marginBottom: 16,
     },
     cardTitle: {
-        color: 'white',
-        fontWeight: 'bold',
+        color: '#18181B',
+        fontWeight: '600',
     },
 });
