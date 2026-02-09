@@ -25,7 +25,7 @@ A premium fitness coaching app built with React Native (Expo) and Supabase.
     - Press `a` to open in Android Emulator (requires Android Studio).
     - Scan the QR code with the **Expo Go** app on your physical device.
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### "Command not found: npx" or "npm"
 -   Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
@@ -43,7 +43,7 @@ A premium fitness coaching app built with React Native (Expo) and Supabase.
 -   Ensure your device has internet access.
 -   If using Supabase Local, make sure it's running.
 
-## 📱 Features
+## Features
 
 -   **Onboarding Flow**: Collects user stats, goals, and equipment.
 -   **Workout Generation**: Uses OpenAI (GPT-4) to create personalized plans.
